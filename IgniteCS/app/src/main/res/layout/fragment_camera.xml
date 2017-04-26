@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.matt.ignitecs.FragmentCamera">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:onClick="process"
+        android:text="Button" />
+
+    <TextureView
+        android:id="@+id/mTextureView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

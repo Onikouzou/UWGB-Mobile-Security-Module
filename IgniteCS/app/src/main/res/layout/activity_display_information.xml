@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#006633"
+    tools:context="com.example.matt.ignitecs.DisplayInformation"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <fragment
+        android:id="@+id/map"
+        class = "com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="563dp"
+        android:layout_height="290dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintHorizontal_bias="0.523" />
+
+    <TextView
+        android:id="@+id/lblContactInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Contacts"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:layout_marginLeft="26dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="0dp"
+        android:layout_height="871dp"
+        android:clickable="true"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <fragment
+        android:id="@+id/fragmentContacts"
+        android:name="com.example.matt.ignitecs.FragmentContacts"
+        android:layout_width="229dp"
+        android:layout_height="435dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/lblContactInfo"
+        app:layout_constraintRight_toLeftOf="@+id/fragment"
+        android:layout_marginRight="18dp" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.matt.ignitecs.FragmentCamera"
+        android:layout_width="327dp"
+        android:layout_height="477dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/map"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="572dp"
+        android:layout_height="59dp"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location: "
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/txtLocCoarse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="111.11 111.11"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</android.support.constraint.ConstraintLayout>
